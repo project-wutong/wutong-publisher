@@ -1,0 +1,19 @@
+[package]
+name = "wutong-publisher-bridge"
+description = "cxx bridge exposing the Wutong Publisher Rust engine to the Qt/C++ GUI"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+wutong-publisher-core.workspace = true
+wutong-core.workspace = true
+cxx = "1"
+
+[build-dependencies]
+cxx-build = "1"
