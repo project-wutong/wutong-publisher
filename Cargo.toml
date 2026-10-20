@@ -1,0 +1,17 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "AGPL-3.0-only"
+repository = "https://github.com/project-wutong/wutong-publisher"
+
+[workspace.dependencies]
+wutong-core = { git = "https://github.com/project-wutong/wutong-core", branch = "main" }
+wutong-publisher-core = { path = "crates/wutong-publisher-core" }
+
+[profile.release]
+lto = "thin"
